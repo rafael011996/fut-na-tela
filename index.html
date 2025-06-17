@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="É totalmente gratuito e sem anúncios! Assista aos melhores jogos ao vivo, incluindo o Campeonato Brasileiro, Copa do Brasil, Copa Sul-Americana, Libertadores 2025 e muito mais, com sinais de TV online de alta qualidade!">
+    <title>Fut Na Tela</title>
+
+    <link rel="icon" href="iconefutnatela.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .button-sinals {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .button-sinals button {
+            padding: 10px 15px;
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .button-sinals button:hover {
+            background-color: #cc0000;
+        }
+
+        .category-title {
+            width: 100%;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html" class="custom-logo-link" rel="home">
+                <img src="FUTNATELALOGO.png" class="custom-logo" alt="fut-na-tela-logo">
+            </a>
+        </div>
+    </header>
+
+    <div id="welcomeMessage" class="welcome-message">
+        <p>Atenção: Transmissão ao vivo apenas 40 minutos antes dos jogos desejado para assistir.</p>
+        <button onclick="closeMessage()">Fechar</button>
+    </div>
+
+    <main>
+        <section class="content-post">
+            <article>
+                <h1>Flamengo X Central Córdoba</h1>
+                <h2>Libertadores (09/04 - 21:30)</h2>
+                <div class="player-channel">
+                    <div class="player-cover" id="playerCover">
+                        <img src="https://fla-image.mundobola.com/_next/image/?url=https%3A%2F%2Ffla-media.mundobola.com%2Fmedia%2F2025%2F04%2Fflamengo-x-central-cordoba.jpg&w=1200&q=75" alt="Capa do Vídeo">
+                    </div>
+
+                    <iframe id="videoPlayer" src="" allowfullscreen allow="encrypted-media" style="display:none; width:100%; height:500px;" sandbox="allow-scripts allow-same-origin"></iframe>
+
+                    <hr>
+
+                    <!-- Botões organizados -->
+                    <div class="button-sinals">
+                        <div class="category-title">Abertos</div>
+                        <button onclick="playVideo('https://embedcanaistv.com/globosp/')">GLOBO SP</button>
+                        <button onclick="playVideo('https://embedcanaistv.com/sbtsp/')">SBT</button>
+
+                        <div class="category-title">Esportes</div>
+                        <button onclick="playVideo('https://embedcanaistv.com/combate/')">COMBATE</button>
+                        <button onclick="playVideo('https://embedcanaistv.com/sportv/')">SPORTV</button>
+                        <button onclick="playVideo('https://embedcanaistv.com/sportv2/')">SPORTV 2</button>
+                        <button onclick="playVideo('https://embedcanaistv.com/sportv3/')">SPORTV 3</button>
+                        <button onclick="playVideo('https://embedcanaistv.com/espn/')">ESPN</button>
+                        <button onclick="playVideo('https://embedcanaistv.com/espn2/')">ESPN 2</button>
+                        <button onclick="playVideo('https://embedcanaistv.com/espn3/')">ESPN 3</button>
+                        <button onclick="playVideo('https://embedcanaistv.com/espn4/')">ESPN 4</button>
+                        <button onclick="playVideo('https://embedcanaistv.com/espn5/')">ESPN 5</button>
+                        <button onclick="playVideo('https://embedcanaistv.com/espn6/')">ESPN 6</button>
+
+                        <div class="category-title">Premiere</div>
+                        <button onclick="playVideo('https://embedcanaistv.com/premiereclubes/')">PREMIERE CLUBES</button>
+                        <button onclick="playVideo('https://embedcanaistv.com/premiere2/')">PREMIERE 2</button>
+                        <button onclick="playVideo('https://embedcanaistv.com/premiere3/')">PREMIERE 3</button>
+                        <button onclick="playVideo('https://embedcanaistv.com/premiere4/')">PREMIERE 4</button>
+                        <button onclick="playVideo('https://embedcanaistv.com/premiere5/')">PREMIERE 5</button>
+                        <button onclick="playVideo('https://embedcanaistv.com/premiere6/')">PREMIERE 6</button>
+                        <button onclick="playVideo('https://embedcanaistv.com/premiere7/')">PREMIERE 7</button>
+                        <button onclick="playVideo('https://embedcanaistv.com/premiere8/')">PREMIERE 8</button>
+
+                        <div class="category-title">Streaming</div>
+                        <button onclick="playVideo('https://embedcanaistv.com/amazonprimevideo/')">PRIME VIDEO</button>
+                        <button onclick="playVideo('https://embedcanaistv.com/starplus/')">STAR+</button>
+                    </div>
+
+                    <h2>Siga nosso perfil para nos ajudar continuar trazendo partidas online, sem anúncios e sem custo. Site compatível com todos os dispositivos!</h2>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Fut Na Tela ao Vivo - Todos os direitos reservados.</p>
+        <div class="footer-icons">
+            <a href="https://t.me/+1UueLQgAKHY2NzAx" target="_blank">
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a href="https://www.instagram.com/futnatela_aovivo?igsh=cnd0enU2eDIwemZy" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        function playVideo(link) {
+            const player = document.getElementById("videoPlayer");
+            const cover = document.getElementById("playerCover");
+            player.src = link;
+            player.style.display = "block";
+            cover.style.display = "none";
+        }
+
+        function closeMessage() {
+            document.getElementById('welcomeMessage').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

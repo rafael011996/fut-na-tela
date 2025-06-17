@@ -1,0 +1,232 @@
+/* Definindo cores principais */
+:root {
+    --cor-preta: #000;
+    --cor-vermelha: #d32f2f;
+    --cor-branca: #fff;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-preta);
+    color: var(--cor-branca);
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--cor-vermelha);
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.logo img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.content-post h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: var(--cor-vermelha);
+    font-size: 36px;
+    margin-bottom: 10px;
+    animation: slideInLeft 1s ease-out;
+}
+
+.content-post h2 {
+    color: var(--cor-vermelha);
+    font-size: 18px;
+    margin-top: 10px;
+    animation: slideInRight 1s ease-out;
+}
+
+.player-channel {
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Imagem do player (capa inicial) */
+.player-cover img {
+    width: 100%; /* Garantir que a imagem ocupe toda a largura disponível */
+    height: auto; /* Manter a proporção da imagem */
+    object-fit: cover; /* Garantir que a imagem cubra todo o espaço, cortando se necessário */
+}
+
+/* Player de vídeo que ficará oculto inicialmente */
+iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+iframe:hover {
+    transform: scale(1.05);
+}
+
+.button-sinals {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.button-sinals button {
+    background-color: var(--cor-vermelha);
+    color: var(--cor-branca);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-sinals button:hover {
+    background-color: #c62828;
+    transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--cor-preta);
+    color: var(--cor-branca);
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+footer .footer-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .footer-icons a {
+    color: var(--cor-branca);
+    font-size: 50px;
+    transition: color 0.3s ease;
+}
+
+footer .footer-icons a:hover {
+    color: var(--cor-vermelha);
+}
+
+/* Estilo para a caixa de mensagem */
+.welcome-message {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    font-size: 18px;
+    display: none; /* Começa oculta */
+}
+
+.welcome-message button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #530d00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.welcome-message button:hover {
+    background-color: #ff4500;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .content-post h1 {
+        font-size: 28px;
+    }
+
+    .content-post h2 {
+        font-size: 16px;
+    }
+
+    iframe {
+        height: 300px; /* Ajusta a altura do player em dispositivos móveis */
+    }
+
+    .button-sinals button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .footer-icons a {
+        font-size: 25px;
+    }
+
+    footer .footer-icons a {
+        font-size: 20px;
+    }
+
+    .logo img {
+        max-width: 120px; /* Reduz o tamanho do logo em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    .content-post h1 {
+        font-size: 24px; /* Ajusta o tamanho da fonte do título */
+    }
+
+    .content-post h2 {
+        font-size: 14px; /* Ajusta o tamanho da fonte do subtítulo */
+    }
+
+    iframe {
+        height: 250px; /* Ajusta a altura do player em telas menores */
+    }
+
+    .button-sinals button {
+        width: 100%; /* Torna os botões responsivos */
+    }
+}
