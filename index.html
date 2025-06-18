@@ -44,10 +44,6 @@
 
         $('.card button[data-type="view"]').on('click', function() {
             var channel = $(this).closest('.card').data('channel');
-            window.open(`https://embedtv-2.icu/${channel}`, '_blank');
-
-            return;
-            //$("#modal .iframe").html(`<iframe id="iframePlayer" src="https://alphaembeder.shop/band_sports_hd/embed.html" allowfullscreen=""></iframe>`);
             $("#modal .iframe").html(`<iframe id="iframePlayer" src="https://embedtv-2.icu/${channel}" allowfullscreen=""></iframe>`);
             $("#modal").css("display", "flex");
 
